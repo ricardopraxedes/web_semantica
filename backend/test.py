@@ -1,24 +1,18 @@
-import http.server
-import socketserver
-from urllib.parse import urlparse
-from urllib.parse import parse_qs
-import rdflib
-from rdflib import Namespace
-from rdflib.namespace import RDFS,RDF
+from os import name
+from flask import Flask, flash, redirect, render_template, \
+     request, url_for
 from owlready2 import *
+import uuid
 
-def getHtml():
-    ontologia = get_ontology("mall.owl").load()
-    namespace = ontologia.get_namespace("http://www.owl-ontologies.com/mall.owl#")
-    # lista = list(onto.individuals())
-    html  = "<p>Lojas:</p>"
-    classes = list(ontologia.classes())
-    alimentacao = ontologia.search(type=classes[7])
-    calcados = ontologia.search(type=classes[8])
-    eletronicos = ontologia.search(type=classes[9])
-    print(alimentacao)
-    print(calcados)
-    print(eletronicos)
+app = Flask(__name__)
+
+ontologia = get_ontology("mall.owl").load()
+classes = list(ontologia.classes())
+print(classes)
+ontologia.save()
+print(classes)
 
 
-getHtml()
+if __name__=='__main__':
+    app.run(debug=True)
+

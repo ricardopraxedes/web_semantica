@@ -190,8 +190,19 @@
     <!-- http://www.owl-ontologies.com/mall.owl#corridorNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/mall.owl#corridorNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/mall.owl#Corridor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mall.owl#customerId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/mall.owl#customerId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/mall.owl#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -199,6 +210,7 @@
     <!-- http://www.owl-ontologies.com/mall.owl#customerName -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/mall.owl#customerName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/mall.owl#Customer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -218,6 +230,7 @@
     <!-- http://www.owl-ontologies.com/mall.owl#floorNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/mall.owl#floorNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/mall.owl#Floor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -227,6 +240,7 @@
     <!-- http://www.owl-ontologies.com/mall.owl#productName -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/mall.owl#productName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/mall.owl#Product"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -236,6 +250,7 @@
     <!-- http://www.owl-ontologies.com/mall.owl#shoppingName -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/mall.owl#shoppingName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/mall.owl#Shopping"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -245,6 +260,7 @@
     <!-- http://www.owl-ontologies.com/mall.owl#storeNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/mall.owl#storeNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/mall.owl#Store"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
