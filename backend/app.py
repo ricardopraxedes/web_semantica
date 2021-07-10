@@ -11,8 +11,8 @@ import locale
 app = Flask(__name__)
 
 class ProdutoDTO:
-    def __init__(self, name, id=None,):
-        self.name, self.id = name, id
+    def __init__(self, name, id=None,price=None):
+        self.name, self.id, self.price = name, id, price
 
 class CompraDTO:
     def __init__(self,  id=None,date=None, produto=None):
@@ -72,9 +72,11 @@ def listing():
     listaDeprodutos=[]
 
     for produto in produtos:
+        print(produto.get_properties())
         listaDeprodutos.append(ProdutoDTO(
             produto._name,
             id=produto.productId,
+            price=produto.productPrice
         ).__dict__)
 
     return (jsonify(listaDeprodutos))
