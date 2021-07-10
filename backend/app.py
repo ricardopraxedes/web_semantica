@@ -5,8 +5,6 @@ from flask import Flask, flash, redirect, render_template, \
 from owlready2 import *
 import uuid
 from datetime import date
-import locale
-
 
 app = Flask(__name__)
 
@@ -18,7 +16,6 @@ class CompraDTO:
     def __init__(self,  id=None,date=None, produto=None):
         self.id, self.date, self.produto = id, date, produto
 
-# locale.setlocale(locale.LC_TIME, "pt_BR")
 ontologia = get_ontology("mall.owl").load()
 classes = list(ontologia.classes())
 Purchase = classes[5]
@@ -72,7 +69,6 @@ def listing():
     listaDeprodutos=[]
 
     for produto in produtos:
-        print(produto.get_properties())
         listaDeprodutos.append(ProdutoDTO(
             produto._name,
             id=produto.productId,
@@ -100,10 +96,9 @@ def compra():
                 customerToSave = customer
 
     purchase = Purchase()
-
+    purchase.purchaseId = str(uuid.uuid4())
     dataDaCompra = date.today()
     dataDaCompra = dataDaCompra.strftime('%d/%m/%Y')
-    print(dataDaCompra)
     purchase.date = dataDaCompra
     purchase.customer = customerToSave
     purchase.product = productToSave
@@ -137,19 +132,20 @@ def teste(id):
     for customer in customers:
         if customer.customerId==id:
             for purchase in customer.purchases:
-                print(purchase.__dict__)
+                
                 nomeProduto=purchase.product._name
                 idProduto=purchase.product.productId
-                # print(purchase.date)
-                # print(purchase.customer.__dict__)
-                # print(purchase.product.__dict__)
-                print("\n")
+                precoProduto=purchase.product.productPrice
+                
                 listaDeCompras.append(CompraDTO(
+                    id=purchase.purchaseId,
                     date=purchase.date,
                     produto=ProdutoDTO(            
                         nomeProduto,
-                        id=idProduto).__dict__,
+                        id=idProduto,
+                        price=precoProduto).__dict__,
                  ).__dict__)
+            
             return (jsonify(listaDeCompras), 200)
 
     return (str("Cliente não encontrado."), 400)
