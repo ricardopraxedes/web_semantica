@@ -4,6 +4,9 @@ from flask import Flask, flash, redirect, render_template, \
      request, url_for,jsonify
 from owlready2 import *
 import uuid
+from datetime import date
+import locale
+
 
 app = Flask(__name__)
 
@@ -11,22 +14,30 @@ class ProdutoDTO:
     def __init__(self, name, id=None,):
         self.name, self.id = name, id
 
+class CompraDTO:
+    def __init__(self,  id=None,date=None, produto=None):
+        self.id, self.date, self.produto = id, date, produto
+
+# locale.setlocale(locale.LC_TIME, "pt_BR")
 ontologia = get_ontology("mall.owl").load()
 classes = list(ontologia.classes())
 Purchase = classes[5]
 Customer = classes[1]
-# print(classes)
 customers = ontologia.search(type=classes[1])
 lojas = ontologia.search(type=classes[3])
 produtos = ontologia.search(type=classes[4])
 compras = ontologia.search(type=classes[5])
-print(compras)
 alimentacao = ontologia.search(type=classes[7])
 calcados = ontologia.search(type=classes[8])
 eletronicos = ontologia.search(type=classes[9])
 filtros=['Todas as lojas','Ordem Alfabetica','Alimentação', 'Calçados','Eletrônicos']
 filtroSelecionado = ""
 lojasFiltradas = lojas
+
+print("compras")
+print(len(list(compras)))
+print("customers")
+print(len(list(customers)))
 
 
 @app.route("/filtrar" , methods=['POST'])
@@ -54,7 +65,6 @@ def filtrar():
     return (str(storeList))
     
 @app.route("/produtos" , methods=['GET'])
-#todo
 def listing():
     global produtos
     global lojasFiltradas
@@ -62,7 +72,6 @@ def listing():
     listaDeprodutos=[]
 
     for produto in produtos:
-        produto.productId = str(uuid.uuid4())
         listaDeprodutos.append(ProdutoDTO(
             produto._name,
             id=produto.productId,
@@ -81,27 +90,22 @@ def compra():
     product = purchaseFromRequest["product"]
 
     for produto in produtos:
-        # print(produto.__dict__)
         if produto.productId==product["id"]:
             productToSave = produto
     
     for customer in customers:
         if customer.customerId==customerFromRequest["id"]:
                 customerToSave = customer
-                # print(customer.customerId)
-                # print(customer.customerName)
-                # print(customer.purchases)
-
-
-    print(customerToSave)
-    print(productToSave)
 
     purchase = Purchase()
+
+    dataDaCompra = date.today()
+    dataDaCompra = dataDaCompra.strftime('%d/%m/%Y')
+    print(dataDaCompra)
+    purchase.date = dataDaCompra
     purchase.customer = customerToSave
     purchase.product = productToSave
-    customerToSave.purchases = [purchase]
-
-    # print(customerToSave.get_object_properties())
+    customerToSave.purchases.append(purchase)
 
     ontologia.save("mall.owl")
 
@@ -126,10 +130,25 @@ def cadastrar():
 def teste(id): 
     global customers
     global compras
+    listaDeCompras = []
 
     for customer in customers:
         if customer.customerId==id:
-            return (str(customer.purchases), 200)
+            for purchase in customer.purchases:
+                print(purchase.__dict__)
+                nomeProduto=purchase.product._name
+                idProduto=purchase.product.productId
+                # print(purchase.date)
+                # print(purchase.customer.__dict__)
+                # print(purchase.product.__dict__)
+                print("\n")
+                listaDeCompras.append(CompraDTO(
+                    date=purchase.date,
+                    produto=ProdutoDTO(            
+                        nomeProduto,
+                        id=idProduto).__dict__,
+                 ).__dict__)
+            return (jsonify(listaDeCompras), 200)
 
     return (str("Cliente não encontrado."), 400)
 
