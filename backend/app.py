@@ -20,6 +20,7 @@ customers = ontologia.search(type=classes[1])
 lojas = ontologia.search(type=classes[3])
 produtos = ontologia.search(type=classes[4])
 compras = ontologia.search(type=classes[5])
+print(compras)
 alimentacao = ontologia.search(type=classes[7])
 calcados = ontologia.search(type=classes[8])
 eletronicos = ontologia.search(type=classes[9])
@@ -121,20 +122,16 @@ def cadastrar():
 
     return (new_id, 200)
 
-@app.route("/teste" , methods=['GET'])
-def teste(): 
+@app.route("/minhas-compras/<id>" , methods=['GET'])
+def teste(id): 
     global customers
     global compras
-    
+
     for customer in customers:
-        print(list(customer.purchases))
+        if customer.customerId==id:
+            return (str(customer.purchases), 200)
 
-    print("\n\n\n\n\n")
-
-    for compra in compras:
-        print(compra)
-    
-    return ("", 200)
+    return (str("Cliente não encontrado."), 400)
 
 if __name__=='__main__':
     app.run(debug=True)

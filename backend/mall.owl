@@ -254,25 +254,4 @@
   <ont.:productId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">87bb6c4c-86ec-46ee-a1cb-f6d4db613f22</ont.:productId>
   <mall:productName>TV</mall:productName>
 </mall:Product>
-
-<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#443b9c94-2e95-41eb-8088-1abf9962711f"/>
-  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
-</mall:Purchase>
-
-<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#443b9c94-2e95-41eb-8088-1abf9962711f">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase2"/>
-  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">443b9c94-2e95-41eb-8088-1abf9962711f</mall:customerId>
-  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teste1</mall:customerName>
-</mall:Customer>
-
-<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase2">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#443b9c94-2e95-41eb-8088-1abf9962711f"/>
-  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
-</mall:Purchase>
-
-
 </rdf:RDF>
