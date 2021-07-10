@@ -275,21 +275,4 @@
   <mall:productName>TV</mall:productName>
   <mall:productPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</mall:productPrice>
 </mall:Product>
-
-<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#eb139270-3b32-46b5-ad96-1063fa548ef1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase1"/>
-  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eb139270-3b32-46b5-ad96-1063fa548ef1</mall:customerId>
-  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teste1</mall:customerName>
-</mall:Customer>
-
-<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#eb139270-3b32-46b5-ad96-1063fa548ef1"/>
-  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
-  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/07/2021</mall:date>
-  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a62a1798-a566-477b-807f-24ea34785b47</mall:purchaseId>
-</mall:Purchase>
-
-
 </rdf:RDF>

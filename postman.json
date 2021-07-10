@@ -1,71 +1,247 @@
 {
-	"info": {
-		"_postman_id": "c764229b-726d-4430-bfd3-495127f15016",
-		"name": "New Collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "http://127.0.0.1:5000/cadastro",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\": \"Teste1\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:5000/cadastro",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "5000",
-					"path": [
-						"cadastro"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://127.0.0.1:5000/compra",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"customer\":{\n        \"id\":\"338e802d-e768-4ebe-a9c4-825cd40d808f\"\n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:5000/compra",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "5000",
-					"path": [
-						"compra"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2021-07-10T18:45:41.901Z",
+    "__export_source": "insomnia.desktop.app:v2021.3.0",
+    "resources": [
+        {
+            "_id": "req_409e3bbd4bfb4621aaf944325898e0fa",
+            "parentId": "fld_86b9af7f33c94a11a9d1de53ccd2daa7",
+            "modified": 1625863294674,
+            "created": 1625863251942,
+            "url": "http://127.0.0.1:5000/cadastro",
+            "name": "http://127.0.0.1:5000/cadastro",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "",
+                "text": "{\n\t\"name\": \"Teste1\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_ee08db1889b64fdda4e660deb662c4fd"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1625863251942,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_86b9af7f33c94a11a9d1de53ccd2daa7",
+            "parentId": "wrk_9bae706d382a42efba31bd7028c0c475",
+            "modified": 1625863278031,
+            "created": 1625863260346,
+            "name": "web_semantica",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1625863260346,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_9bae706d382a42efba31bd7028c0c475",
+            "parentId": null,
+            "modified": 1612559367924,
+            "created": 1612559367924,
+            "name": "Insomnia",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_f35dce30d6134d548823c16905734065",
+            "parentId": "fld_86b9af7f33c94a11a9d1de53ccd2daa7",
+            "modified": 1625942466042,
+            "created": 1625863251939,
+            "url": "http://127.0.0.1:5000/compra",
+            "name": "http://127.0.0.1:5000/compra",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "",
+                "text": "{\n\t\"purchase\": {\n\t\t\"customer\": {\n\t\t\t\"id\": \"eb139270-3b32-46b5-ad96-1063fa548ef1\"\n\t\t},\n\t\t\"product\": {\n\t\t\t\"id\": \"55a399c2-6fc5-459c-9d44-d5997e07ac0b\"\n\t\t}\n\t}\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_4915a6234d38400c8a61cc07d2185ea8"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1625863251939,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_4741d033797d43298d890be2d5ab5c09",
+            "parentId": "fld_86b9af7f33c94a11a9d1de53ccd2daa7",
+            "modified": 1625867512375,
+            "created": 1625867490256,
+            "url": "http://127.0.0.1:5000/produtos",
+            "name": "http://127.0.0.1:5000/produtos",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1624468662871,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_1dc50dcc9f0c4773ad2d50d813875af9",
+            "parentId": "fld_86b9af7f33c94a11a9d1de53ccd2daa7",
+            "modified": 1625942556793,
+            "created": 1625927325494,
+            "url": "http://127.0.0.1:5000/minhas-compras/eb139270-3b32-46b5-ad96-1063fa548ef1",
+            "name": "http://127.0.0.1:5000/minhas-compras",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1623771368337,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_3a21a4b70024c09bcab6180f39b517659aba426b",
+            "parentId": "wrk_9bae706d382a42efba31bd7028c0c475",
+            "modified": 1615379558290,
+            "created": 1612559367963,
+            "name": "Base Environment",
+            "data": {
+                "baseURL": "localhost:3333"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "baseURL"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1612559367963,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_3a21a4b70024c09bcab6180f39b517659aba426b",
+            "parentId": "wrk_9bae706d382a42efba31bd7028c0c475",
+            "modified": 1616702592406,
+            "created": 1612559367965,
+            "name": "Default Jar",
+            "cookies": [
+                {
+                    "key": "JSESSIONID",
+                    "value": "4A91DD01891322E884DC288DEBC8BAF0",
+                    "domain": "localhost",
+                    "path": "/bem-viver",
+                    "httpOnly": true,
+                    "hostOnly": true,
+                    "creation": "2021-02-16T20:24:29.818Z",
+                    "lastAccessed": "2021-03-25T20:03:12.406Z",
+                    "id": "8144216940509594"
+                }
+            ],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_eaa49362a57c481680d13a7f99207a1c",
+            "parentId": "wrk_9bae706d382a42efba31bd7028c0c475",
+            "modified": 1612559367925,
+            "created": 1612559367925,
+            "fileName": "Insomnia",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        },
+        {
+            "_id": "env_18b0d70ae58e4c718147f429f85fd06e",
+            "parentId": "env_3a21a4b70024c09bcab6180f39b517659aba426b",
+            "modified": 1615379596960,
+            "created": 1615379544267,
+            "name": "ignite",
+            "data": {
+                "baseURL": "localhost:3333"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "baseURL"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1615379544267,
+            "_type": "environment"
+        },
+        {
+            "_id": "env_f25a8d920ee74a20900609c2747e405a",
+            "parentId": "env_3a21a4b70024c09bcab6180f39b517659aba426b",
+            "modified": 1620221490750,
+            "created": 1620219877253,
+            "name": "Prod",
+            "data": {
+                "baseURL": "https://nodejstraining.ricardopraxedes.dev"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "baseURL"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1620219877253,
+            "_type": "environment"
+        },
+        {
+            "_id": "env_63f6b1a2ed744917a7d76fc7e37851be",
+            "parentId": "env_3a21a4b70024c09bcab6180f39b517659aba426b",
+            "modified": 1621363113752,
+            "created": 1621363029094,
+            "name": "nest",
+            "data": {
+                "baseURL": "localhost:3000"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "baseURL"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1621363029094,
+            "_type": "environment"
+        }
+    ]
 }
