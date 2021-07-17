@@ -3,11 +3,11 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="mall.owl/mall.owl/mall.owl/mall.owl/mall.owl"
-         xmlns="mall.owl/mall.owl/mall.owl/mall.owl/mall.owl#"
+         xml:base="mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl"
+         xmlns="mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl#"
          xmlns:mall="http://www.owl-ontologies.com/mall.owl#">
 
-<owl:Ontology rdf:about="mall.owl/mall.owl/mall.owl/mall.owl/mall.owl"/>
+<owl:Ontology rdf:about="mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl"/>
 
 <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/mall.owl#connects">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
@@ -275,4 +275,21 @@
   <mall:productName>TV</mall:productName>
   <mall:productPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</mall:productPrice>
 </mall:Product>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase1"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">154c7db6-d128-48bc-bcb3-dc38af299459</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teste1</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">589d9751-f8c1-4c05-be52-f1b4cc4eff26</mall:purchaseId>
+</mall:Purchase>
+
+
 </rdf:RDF>

@@ -5,8 +5,10 @@ from flask import Flask, flash, redirect, render_template, \
 from owlready2 import *
 import uuid
 from datetime import date
-
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 class ProdutoDTO:
     def __init__(self, name, id=None,price=None):
@@ -36,7 +38,7 @@ print(len(list(compras)))
 print("customers")
 print(len(list(customers)))
 
-
+@cross_origin()
 @app.route("/filtrar" , methods=['POST'])
 def filtrar():
     global lojasFiltradas
@@ -60,7 +62,7 @@ def filtrar():
     for loja in lojasFiltradas:
         storeList.append(loja._name)    
     return (str(storeList))
-    
+@cross_origin()    
 @app.route("/produtos" , methods=['GET'])
 def listing():
     global produtos
@@ -76,7 +78,7 @@ def listing():
         ).__dict__)
 
     return (jsonify(listaDeprodutos))
-
+@cross_origin()
 @app.route("/compra" , methods=['POST'])
 def compra():
     global Purchase
@@ -107,7 +109,7 @@ def compra():
     ontologia.save("mall.owl")
 
     return ('', 200)
-
+@cross_origin()
 @app.route("/cadastro" , methods=['POST'])
 def cadastrar():
     global classes
@@ -122,7 +124,7 @@ def cadastrar():
     ontologia.save("mall.owl")
 
     return (new_id, 200)
-
+@cross_origin()
 @app.route("/minhas-compras/<id>" , methods=['GET'])
 def teste(id): 
     global customers

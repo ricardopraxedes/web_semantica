@@ -1,0 +1,14 @@
+<button mat-raised-button (click)="boxSelect('product')" color="primary">produtos</button>
+<button mat-raised-button (click)="boxSelect('cart')" color="primary">Meu Carrinho</button>
+<button mat-raised-button (click)="boxSelect('stores')"  color="primary">Primary</button>
+
+        <div *ngIf="this.boxChosen==='product'">
+            <app-products></app-products> 
+        </div>
+        <div *ngIf="this.boxChosen==='cart'">
+            <app-cart></app-cart> 
+        </div>
+        <div *ngIf="this.boxChosen==='store'">
+            <app-products></app-products> 
+        </div>
+
