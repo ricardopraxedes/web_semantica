@@ -41,10 +41,11 @@ print(len(list(customers)))
 @cross_origin()
 @app.route("/filtrar" , methods=['POST'])
 def filtrar():
+    
     global lojasFiltradas
     global filtroSelecionado
     filtroSelecionado  = request.json['filter']
-    
+ 
     if filtroSelecionado == filtros[0]:
         lojasFiltradas = lojas
     if filtroSelecionado == filtros[1]:

@@ -1,14 +1,22 @@
-<button mat-raised-button (click)="boxSelect('product')" color="primary">produtos</button>
-<button mat-raised-button (click)="boxSelect('cart')" color="primary">Meu Carrinho</button>
-<button mat-raised-button (click)="boxSelect('stores')"  color="primary">Primary</button>
+<img src="../../assets/images/header.png" class="img-fluid" alt="Responsive image">
+<div class="row">
+    <div class="col-2 justify-content-around d-flex flex-column">
+  
+        <button type="button" class="btn btn-outline-success btn-lg" id="Button">Lojas</button>
 
-        <div *ngIf="this.boxChosen==='product'">
-            <app-products></app-products> 
-        </div>
-        <div *ngIf="this.boxChosen==='cart'">
-            <app-cart></app-cart> 
-        </div>
-        <div *ngIf="this.boxChosen==='store'">
-            <app-products></app-products> 
-        </div>
+        <button type="button" class="btn btn-outline-success btn-lg" id="Button">Produtos</button>
+   
+        <button type="button" class="btn btn-outline-success btn-lg" id="Button">Sobre nos </button>
+
+        <button type="button" class="btn btn-outline-success btn-lg" id="Button">Minha Conta</button>
+       
+
+            
+    </div>
+    <div class="col-lg-6">
+
+       <app-stores></app-stores>
+
+    </div>        
+</div>
 

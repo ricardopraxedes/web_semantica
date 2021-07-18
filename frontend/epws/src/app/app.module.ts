@@ -8,22 +8,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
+import { HomeComponent } from './home/home.component';
+import { StoresComponent } from './stores/stores.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CentralComponent,
     ProductsComponent,
     CartComponent,
-    CarrouselComponent
+    CarrouselComponent,
+    HomeComponent,
+    StoresComponent
   ],
   imports: [
     MatButtonModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+
   ],
   providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
