@@ -1,8 +1,7 @@
 <div class="container">
 <div class="row" >
         
-    
-                <div class="card" id="cards" style="width: 18rem;" *ngFor="let product of products">
+                <div class="card" id="cards" style="width: 18rem;" *ngFor="let product of products" (click)="productClicked(product.id,product.name,product.price)">
                     <div class="col-xs-4">                   
                      <div class="card-body" id="body">
                         <div class="col-xs-1 text-center">

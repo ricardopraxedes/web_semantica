@@ -1,1 +1,22 @@
-<p>cart works!</p>
+<div class="container">
+    <div class="row" >
+            
+                    <div class="card" id="cards" style="width: 18rem;" *ngFor="let product of items;let indexOfelement=index;" >
+                        <div class="col-xs-4" >                   
+                         <div class="card-body" id="body">
+                            <div class="col-xs-1 text-center">
+                                <h3 class="card-title">{{product.name}}</h3>
+                                <p class="card-text" id ="text">Preco : {{product.price}}</p>
+                                <button type="button" class="btn btn-danger" (click)="removeItem(indexOfelement)">Remover</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                   </div>
+              
+               
+            
+        </div>
+        <h4 class="font-weight-bold">Soma dos itens:{{totalSum}}   </h4>
+        <button type="button" class="btn btn-success" (click)="makePurchase()">Concluir compra</button>
+    </div>

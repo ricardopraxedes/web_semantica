@@ -1,21 +1,24 @@
 <img src="../../assets/images/header.png" class="img-fluid" alt="Responsive image">
-<div class="row">
+<div class="row" id="main_container">
     <div class="col-2 justify-content-around d-flex flex-column">
   
-        <button type="button" class="btn btn-outline-success btn-lg" id="Button">Lojas</button>
+        <button type="button" class="btn btn-outline-success btn-lg" (click)="boxSelect('Stores')"  id="Button">Lojas</button>
 
-        <button type="button" class="btn btn-outline-success btn-lg" id="Button">Produtos</button>
+        <button type="button" class="btn btn-outline-success btn-lg" (click)="boxSelect('Products')" id="Button">Produtos</button>
    
-        <button type="button" class="btn btn-outline-success btn-lg" id="Button">Sobre nos </button>
+        <button type="button" class="btn btn-outline-success btn-lg" (click)="boxSelect('Cart')" id="Button">Carrinho</button>
 
-        <button type="button" class="btn btn-outline-success btn-lg" id="Button">Minha Conta</button>
+        <button type="button" class="btn btn-outline-success btn-lg" (click)="boxSelect('MyAccount')" id="Button">Minha Conta</button>
        
 
             
     </div>
-    <div class="col-lg-6">
 
-       <app-stores></app-stores>
+    <div class="col-lg-10" >
+        <app-cart *ngIf="pageDTO.page=='Cart'" [items]="cart" [user]="userId" (productRemoved)="cart=$event" (transactionCompleted)="cart=$event"></app-cart>
+       <app-stores *ngIf="pageDTO.page=='Stores'" (storeSelected)="pageDTO=$event"></app-stores>
+       <app-products *ngIf="pageDTO.page=='Products'"[item]="pageDTO.store" (productSelected)="cart.push($event)" ></app-products>
+       <app-shophistory *ngIf="pageDTO.page=='MyAccount'" [user]="userId" ></app-shophistory>
 
     </div>        
 </div>

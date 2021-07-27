@@ -82,12 +82,18 @@ def listing():
 @cross_origin()
 @app.route("/compra" , methods=['POST'])
 def compra():
-    global Purchase
+    ontologia = get_ontology("mall.owl").load()
+    classes = list(ontologia.classes())
+    Purchase = classes[5]
+    Customer = classes[1]
+    customers = ontologia.search(type=classes[1])
+
     global produtos
-    global customers
+
     data = request.json 
     purchaseFromRequest = data["purchase"]
     customerFromRequest = purchaseFromRequest["customer"]
+    customerToSave=purchaseFromRequest["customer"]
     product = purchaseFromRequest["product"]
 
     for produto in produtos:
@@ -128,7 +134,12 @@ def cadastrar():
 @cross_origin()
 @app.route("/minhas-compras/<id>" , methods=['GET'])
 def teste(id): 
-    global customers
+    ontologia = get_ontology("mall.owl").load()
+    classes = list(ontologia.classes())
+    Purchase = classes[5]
+    Customer = classes[1]
+    customers = ontologia.search(type=classes[1])
+
     global compras
     listaDeCompras = []
 
@@ -153,5 +164,19 @@ def teste(id):
 
     return (str("Cliente não encontrado."), 400)
 
+@cross_origin 
+@app.route("/loja/localizacao/<id>" , methods=['GET']) 
+def localizacao(id): 
+    global lojas 
+    global corridor 
+    
+    shops = list(filter(lambda shop: shop._name == id, lojas)) 
+ 
+    if(len(shops) == 0): 
+        return (id, 400)
+ 
+    localized_shop = shops[0] 
+    print(localized_shop)
+    return (jsonify(localized_shop.corridorNumber), 200)
 if __name__=='__main__':
     app.run(debug=True)

@@ -1,0 +1,17 @@
+<img src="../../assets/images/header.png" class="img-fluid" alt="Responsive image">
+<div class="row" id="main_container">
+    <div class="col-2 justify-content-around d-flex flex-column">
+        <div class="btn-group" *ngFor="let item of stores">
+            <button><img id="thumbnail" src={{item}} (click)="storeSelected(item)"></button>
+        </div>
+    </div>
+    <div class="col-lg-10">
+            
+                <h3>{{storeLocation}}</h3>
+    
+
+            
+    </div>
+    
+</div>
+

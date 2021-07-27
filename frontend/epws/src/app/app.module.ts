@@ -10,6 +10,10 @@ import { CartComponent } from './cart/cart.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
 import { HomeComponent } from './home/home.component';
 import { StoresComponent } from './stores/stores.component';
+import { MapComponent } from './map/map.component';
+import { ShophistoryComponent } from './shophistory/shophistory.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,13 +23,17 @@ import { StoresComponent } from './stores/stores.component';
     CartComponent,
     CarrouselComponent,
     HomeComponent,
-    StoresComponent
+    StoresComponent,
+    MapComponent,
+    ShophistoryComponent,
+    LoginComponent
   ],
   imports: [
     MatButtonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule
 
   ],
   providers: [],

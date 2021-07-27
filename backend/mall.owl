@@ -3,11 +3,11 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl"
-         xmlns="mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl#"
+         xml:base="file:/C:/Users/charl/Desktop/College%20Projects/EPWS/backend/mall.owl"
+         xmlns="file:/C:/Users/charl/Desktop/College%20Projects/EPWS/backend/mall.owl#"
          xmlns:mall="http://www.owl-ontologies.com/mall.owl#">
 
-<owl:Ontology rdf:about="mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl/mall.owl"/>
+<owl:Ontology rdf:about="file:/C:/Users/charl/Desktop/College%20Projects/EPWS/backend/mall.owl"/>
 
 <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/mall.owl#connects">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
@@ -214,6 +214,11 @@
 
 <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
 
+<mall:Alimentacao rdf:about="#BurguerKing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:corridorNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mall:corridorNumber>
+</mall:Alimentacao>
+
 <mall:Product rdf:about="http://www.co-ode.org/ontologies/ont.owl#Boots">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <mall:productId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cddece45-eb8b-45c0-ad40-00ef8df049f1</mall:productId>
@@ -223,6 +228,7 @@
 
 <mall:Calcados rdf:about="http://www.co-ode.org/ontologies/ont.owl#WorldTennis">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:corridorNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</mall:corridorNumber>
 </mall:Calcados>
 
 <mall:Product rdf:about="http://www.owl-ontologies.com/mall.owl#Cellphone">
@@ -241,6 +247,7 @@
 
 <mall:Eletronicos rdf:about="http://www.owl-ontologies.com/mall.owl#FastShop">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:corridorNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mall:corridorNumber>
 </mall:Eletronicos>
 
 <mall:Product rdf:about="http://www.owl-ontologies.com/mall.owl#Hamburger">
@@ -252,10 +259,12 @@
 
 <mall:Alimentacao rdf:about="http://www.owl-ontologies.com/mall.owl#KFC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:corridorNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mall:corridorNumber>
 </mall:Alimentacao>
 
 <mall:Alimentacao rdf:about="http://www.owl-ontologies.com/mall.owl#McDonalds">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:corridorNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mall:corridorNumber>
 </mall:Alimentacao>
 
 <mall:Product rdf:about="http://www.owl-ontologies.com/mall.owl#Shoes">
@@ -276,19 +285,634 @@
   <mall:productPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</mall:productPrice>
 </mall:Product>
 
-<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase1"/>
-  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">154c7db6-d128-48bc-bcb3-dc38af299459</mall:customerId>
-  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teste1</mall:customerName>
-</mall:Customer>
-
 <mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
   <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
   <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11/07/2021</mall:date>
   <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">589d9751-f8c1-4c05-be52-f1b4cc4eff26</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase1"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase40"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase41"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase42"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase43"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase44"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase45"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase46"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase47"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">154c7db6-d128-48bc-bcb3-dc38af299459</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teste1</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase40">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abbf6bc7-3b09-48ca-9a45-a30a098f7f06</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase41">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">48a23e5a-a43d-4c07-8f9a-46b17c51bf7f</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase42">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b8c7663d-4b4b-4ed7-b55a-01614515ca48</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase43">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7000cb44-863d-474d-b121-5e07265557e1</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase44">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ec68a97c-ef59-4609-a176-7507ff1c19a5</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase45">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e61f8b86-7612-4e20-8062-8e0c3c27ceee</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase46">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Chicken"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b34ed851-c218-4c4e-951a-716481c83291</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase47">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#154c7db6-d128-48bc-bcb3-dc38af299459"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Chicken"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03accf2d-2629-4f2c-9ce8-9f4daa92c070</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#cc039f17-9cae-416a-8194-7a616f9b747e">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cc039f17-9cae-416a-8194-7a616f9b747e</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlos</mall:customerName>
+</mall:Customer>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#bad68d20-3696-4022-96e0-881ad4ccb2a7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase2"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase3"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bad68d20-3696-4022-96e0-881ad4ccb2a7</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlos</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#bad68d20-3696-4022-96e0-881ad4ccb2a7"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#TV"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">827aa032-ab1a-45e9-8574-e05af64f23ce</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#bad68d20-3696-4022-96e0-881ad4ccb2a7"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#TV"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">246fd23e-c4c6-4653-92ea-a011eadb8e01</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#34e56cac-f1ab-4795-b161-3027007cf5ed">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase4"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase5"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase6"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase7"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase8"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase9"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase10"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34e56cac-f1ab-4795-b161-3027007cf5ed</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asdfasdfasdfsdaf</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#34e56cac-f1ab-4795-b161-3027007cf5ed"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5768c8a7-a40b-4609-90be-88e5cd752045</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#34e56cac-f1ab-4795-b161-3027007cf5ed"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d9e14cf5-01f7-4b89-9dbd-14fc27ad0afe</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#34e56cac-f1ab-4795-b161-3027007cf5ed"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8cff96a9-3ab5-47e1-99f8-46de58e4ca15</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#34e56cac-f1ab-4795-b161-3027007cf5ed"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300e8196-612e-42e1-bbfc-af34260123dc</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#34e56cac-f1ab-4795-b161-3027007cf5ed"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c61c9466-c32f-4c7f-8022-1330f437a616</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#34e56cac-f1ab-4795-b161-3027007cf5ed"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9551c62c-86ec-4a74-9eee-c3560287a8bf</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#34e56cac-f1ab-4795-b161-3027007cf5ed"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6b098cc6-ab68-40a9-8dc6-163a6c11feeb</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#04851185-73ed-4022-84fd-6304658b0bd2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04851185-73ed-4022-84fd-6304658b0bd2</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Car</mall:customerName>
+</mall:Customer>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#bfba15f8-3f44-4fbb-935f-747289224149">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase11"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase12"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase13"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase14"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase15"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase16"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase17"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bfba15f8-3f44-4fbb-935f-747289224149</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASD</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase11">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#bfba15f8-3f44-4fbb-935f-747289224149"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a8932a8e-394e-43dd-949c-6d66ecf7ab3e</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase12">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#bfba15f8-3f44-4fbb-935f-747289224149"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12ef81ee-7cb3-41b0-9e79-25b24e354f70</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase13">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#bfba15f8-3f44-4fbb-935f-747289224149"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0ad1c8ef-ed49-4fe5-ba2c-c0e2f97059e3</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase14">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#bfba15f8-3f44-4fbb-935f-747289224149"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">718e0777-4c04-42c1-9e32-09f28db0a833</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase15">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#bfba15f8-3f44-4fbb-935f-747289224149"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4c691ea0-5431-47dc-b106-428e228f348a</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase16">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#bfba15f8-3f44-4fbb-935f-747289224149"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1659592f-a013-4b15-8f2d-0f5b09a8333f</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#bfba15f8-3f44-4fbb-935f-747289224149"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9c02380a-c29f-4984-933c-d92ddb617282</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase18"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase19"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase20"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase21"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase22"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase23"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase24"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase25"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase26"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase27"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase28"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase29"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9c61adf5-db35-43f4-ace2-dc92dbc1d847</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erwq</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase18">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06d1bb1b-12b5-4ecc-9fcd-89b518de2f94</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase19">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2d1651e1-7d53-4a91-ae6f-f6812939df3e</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase20">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f72f3348-e320-4545-951d-6d9671b9a924</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase21">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dbb22f2b-7c27-4ee3-adf3-f538bc4f0851</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase22">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">39b7e380-b611-4e6f-b1f0-252c5801305d</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase23">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">48213fd4-0333-457a-aac2-fccb998c2c07</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase24">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a25434fe-6182-45de-a0fc-7ecce0914b06</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase25">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fdd27b1e-194a-417d-9138-720050f379d3</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase26">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adbd65df-de74-4341-8cb1-04c733ae4cab</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase27">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5231132f-d85e-4253-b552-8073cfceb832</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase28">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d71a5557-fc2b-439e-a558-26e842626d0b</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase29">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#9c61adf5-db35-43f4-ace2-dc92dbc1d847"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c7df29f5-f08c-443d-8d7b-e39f27e214f0</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#391d84ad-0eee-491a-86c5-5720e930364d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">391d84ad-0eee-491a-86c5-5720e930364d</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wqe</mall:customerName>
+</mall:Customer>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase30"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase31"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase32"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase33"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase34"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase35"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase36"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase37"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase38"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase39"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c1cb051b-61ff-41e4-87eb-b52f9239ba1b</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Car</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase30">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">54f9b72c-c8d7-41d7-89ca-8fdedfe4fd85</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase31">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c037fc34-8c16-44db-b396-90373911d60a</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase32">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">987f7599-20c4-405c-bc50-dfe8a4dadc03</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase33">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">92a7a273-08aa-4e7d-9d31-29210d9f3783</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase34">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4a10d894-6cd9-440f-87a6-c56465e1ea37</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase35">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eaf45a45-f98e-45eb-8d78-8eefd838169e</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase36">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40a86942-10bb-43fc-a154-75f3f856be2f</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase37">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5e9f02e2-df90-45ee-97f5-242c0db9b73e</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase38">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4bd4de06-5c9f-43dd-bd36-7473142ad207</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase39">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#c1cb051b-61ff-41e4-87eb-b52f9239ba1b"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">76b81aa1-de74-4217-80c2-39fcf4364d7e</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase48"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase49"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase50"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase51"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase52"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase53"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase54"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase55"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase56"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase57"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">efbed1ea-e194-4cfd-acd7-bceedbc17bcc</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlos</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase48">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eb2c10cd-4574-446c-b86e-d42d5cf15d53</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase49">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a668caee-6ba8-4fdb-bbfe-952616ba71b3</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase50">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4aa46253-ac58-458e-9aab-1669dccfdf72</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase51">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59b3d505-ebbf-4c38-8c29-972f53998296</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase52">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Boots"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70a6d840-83fb-4164-945a-3727d3889b6c</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase53">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">104dd29e-e066-4748-9fc0-fb70b77937e0</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase54">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80ad2eee-25b1-4195-b867-d52094b4ddc8</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase55">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">182ae69a-1ea6-4e36-9aed-67d5b1a133e4</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase56">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3d2b6b7f-4665-43fe-8f5c-73845d8e6cf7</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase57">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#efbed1ea-e194-4cfd-acd7-bceedbc17bcc"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">96af0866-6bb5-4267-8e45-cb5e0f80bddc</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#6e5121a4-964a-49c9-99e6-f7c9a371294c">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase58"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase59"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase60"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6e5121a4-964a-49c9-99e6-f7c9a371294c</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andre</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase58">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#6e5121a4-964a-49c9-99e6-f7c9a371294c"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#TV"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">099c4efa-cf1a-4fbf-b8f2-a9d22de86da0</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase59">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#6e5121a4-964a-49c9-99e6-f7c9a371294c"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#TV"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ba111236-22a9-4c52-9eaa-bee633b7317f</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase60">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#6e5121a4-964a-49c9-99e6-f7c9a371294c"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#TV"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e05eca96-c4d8-4d03-a647-90d249e9c5e8</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Customer rdf:about="http://www.owl-ontologies.com/mall.owl#905d2fd4-4369-4d12-84da-aa6dfd4d3c1a">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase61"/>
+  <mall:purchases rdf:resource="http://www.owl-ontologies.com/mall.owl#purchase62"/>
+  <mall:customerId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">905d2fd4-4369-4d12-84da-aa6dfd4d3c1a</mall:customerId>
+  <mall:customerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlos</mall:customerName>
+</mall:Customer>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase61">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#905d2fd4-4369-4d12-84da-aa6dfd4d3c1a"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#Cellphone"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d7adad63-80da-4860-bde7-87b5f5292bdf</mall:purchaseId>
+</mall:Purchase>
+
+<mall:Purchase rdf:about="http://www.owl-ontologies.com/mall.owl#purchase62">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <mall:customer rdf:resource="http://www.owl-ontologies.com/mall.owl#905d2fd4-4369-4d12-84da-aa6dfd4d3c1a"/>
+  <mall:product rdf:resource="http://www.owl-ontologies.com/mall.owl#TV"/>
+  <mall:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26/07/2021</mall:date>
+  <mall:purchaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a7566dc5-9750-41a4-9fce-f0da28274e6d</mall:purchaseId>
 </mall:Purchase>
 
 
